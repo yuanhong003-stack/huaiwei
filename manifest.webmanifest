@@ -1,0 +1,18 @@
+{
+  "name": "小步 · 习惯追踪",
+  "short_name": "小步",
+  "description": "一个界面就能完成的极简习惯追踪",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#F2F2F7",
+  "theme_color": "#F2F2F7",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="theme-color" content="#F2F2F7" />
+<meta name="description" content="小步 · 一个界面就能完成的习惯追踪" />
+<title>小步 · 习惯追踪</title>
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="icon" href="icon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="icon.svg" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app" id="app">
+    <main class="scroll" id="view" tabindex="-1"></main>
+
+    <button class="fab" id="fab" type="button" aria-label="新建习惯">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <path d="M12 5.5v13M5.5 12h13" />
+      </svg>
+    </button>
+
+    <nav class="tabbar" id="tabbar" aria-label="主导航">
+      <button class="tab is-active" type="button" data-view="today" aria-current="page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="8.2" />
+          <path d="M8.4 12.3l2.5 2.5 4.8-5.2" />
+        </svg>
+        <span>今日</span>
+      </button>
+      <button class="tab" type="button" data-view="stats">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round">
+          <path d="M5.5 19v-6.5M12 19V5.5M18.5 19v-9.5" />
+        </svg>
+        <span>统计</span>
+      </button>
+      <button class="tab" type="button" data-view="calendar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3.8" y="5.2" width="16.4" height="15" rx="3.2" />
+          <path d="M8.2 3.2v3.6M15.8 3.2v3.6M3.8 10h16.4" />
+        </svg>
+        <span>日历</span>
+      </button>
+      <button class="tab" type="button" data-view="settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <path d="M4 8.4h8.6M17.6 8.4H20M4 15.6h3.4M12.4 15.6H20" />
+          <circle cx="15" cy="8.4" r="2.4" />
+          <circle cx="9.6" cy="15.6" r="2.4" />
+        </svg>
+        <span>设置</span>
+      </button>
+    </nav>
+  </div>
+
+  <div class="sheet-root" id="sheetRoot"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
